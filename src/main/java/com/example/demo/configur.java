@@ -5,13 +5,13 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
-public class configurations {
+@ConfigurationProperties("ok")
+public class configur {
 
-	@Value("${port=5465}")
+	@Value("${portable.number}")
 	private String portable;
 	
-	@Bean
+
 	public String server() {
 		return portable;
 		
