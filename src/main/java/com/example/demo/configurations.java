@@ -2,16 +2,18 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@ConfigurationProperties("security")
+@Configuration
 public class configurations {
 
-	@Value("${port}")
-	private String port;
+	@Value("${port=5465}")
+	private String portable;
 	
-	
+	@Bean
 	public String server() {
-		return port;
+		return portable;
 		
 	}
 }
